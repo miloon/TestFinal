@@ -1,9 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends "EmilyRacineBundle::layout.html.twig" %}
+{% block title %}Liste CRUD{% endblock %}
+    {% block content %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron"><h1>Articles list</h1></div>
 
-{% block body %}
-    <h1>Articles list</h1>
-
-    <table>
+    <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
@@ -39,5 +40,5 @@
         <li>
             <a href="{{ path('CRUD_article_new') }}">Create a new article</a>
         </li>
-    </ul>
-{% endblock %}
+    </ul></div>
+    {% endblock %}

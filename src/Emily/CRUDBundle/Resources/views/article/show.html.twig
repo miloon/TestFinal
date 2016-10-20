@@ -1,9 +1,10 @@
-{% extends 'base.html.twig' %}
+{% extends "EmilyRacineBundle::layout.html.twig" %}
+{% block title %}Liste CRUD{% endblock %}
+    {% block content %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron"><h1>Article</h1></div>
 
-{% block body %}
-    <h1>Article</h1>
-
-    <table>
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
