@@ -1,1 +1,10 @@
-Hello World!
+{% extends "EmilyRacineBundle::layout.html.twig" %}
+{% block title %}Accueil CRUD{% endblock %}
+{% block content %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+          <h1>Accueil CRUD</h1>
+          <p>Pour accéder à la liste de tous les articles, veuillez <a href="{{ path("CRUD_article_index") }}">cliquer ici</a>.</p>
+        </div>
+    </div>
+{% endblock %}

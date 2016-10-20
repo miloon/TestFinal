@@ -35,6 +35,72 @@ class Utilisateur
      */
     private $firstname;
 
+/*
 
+AJOUT de la méthode magique __toString pour forcer la reconnaissance en string de cette table.
+
+*/
+    public function __toString()
+    {
+        return $this->name;
+        return $this->firstname;
+    }
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set name
+     *
+     * @param string $name
+     *
+     * @return Utilisateur
+     */
+    public function setName($name)
+    {
+        $this->name = $name;
+
+        return $this;
+    }
+
+    /**
+     * Get name
+     *
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->name;
+    }
+
+    /**
+     * Set firstname
+     *
+     * @param string $firstname
+     *
+     * @return Utilisateur
+     */
+    public function setFirstname($firstname)
+    {
+        $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    /**
+     * Get firstname
+     *
+     * @return string
+     */
+    public function getFirstname()
+    {
+        return $this->firstname;
+    }
 }
-
