@@ -8,6 +8,10 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return $this->render('EmilyCRUDBundle:Default:index.html.twig');
+        $em = $this->getDoctrine()->getManager();
+        $articles = $em->getRepository('EmilyCRUDBundle:Article')->findAll();
+        return $this->render('EmilyCRUDBundle:Default:index.html.twig', array(
+            'articles' => $articles,
+        ));
     }
 }
