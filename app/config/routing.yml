@@ -1,0 +1,4 @@
+emily_racine:
+    resource: "@EmilyRacineBundle/Resources/config/routing.yml"
+    prefix:   /
+

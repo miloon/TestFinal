@@ -1,0 +1,31 @@
+{% extends "::base.html.twig" %}
+
+{% block body %}
+    {% block menu %}
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{{ path("emily_racine_homepage") }}">Final Test</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="{{ path("emily_racine_homepage") }}">Home</a></li>
+            <li><a href="#">Vers Twig</a></li>
+            <li><a href="#">Vers Crud</a></li>
+            
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    {% endblock %}
+    
+    {% block corps %}
+        <div class="container theme-showcase" role="main">
+            <div class="jumbotron">
+              <h1>Theme example</h1>
+              <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}

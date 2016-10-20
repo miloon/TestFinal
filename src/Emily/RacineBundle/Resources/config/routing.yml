@@ -1,0 +1,3 @@
+emily_racine_homepage:
+    path:     /
+    defaults: { _controller: EmilyRacineBundle:Default:index }
