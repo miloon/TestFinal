@@ -1,0 +1,9 @@
+emily_twig_homepage:
+    path:     /
+    defaults: { _controller: EmilyTwigBundle:Default:index }
+emily_twig_conditions:
+    path:     /si
+    defaults: { _controller: EmilyTwigBundle:Default:conditions }
+emily_twig_boucles:
+    path:     /boucles
+    defaults: { _controller: EmilyTwigBundle:Default:boucles }

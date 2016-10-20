@@ -1,0 +1,12 @@
+{% extends "EmilyRacineBundle::layout.html.twig" %}
+{% block title %}Accueil Twig{% endblock %}
+{% block content %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+          <h1>Accueil Twig</h1>
+          {% block lemenu %}{% include 'EmilyTwigBundle:Default:menu.html.twig' %}{% endblock%}
+        </div>
+        <p>Twig is a template engine for the PHP programming language. Its syntax originates from Jinja and Django templates. It's an open source product licensed under a BSD License and maintained by Fabien Potencier. The initial version was created by Armin Ronacher. Symfony 2 PHP framework comes with a bundled support for Twig as its default template engine.</p>
+        <p>Twig n'est pas le seul moteur de templates qui existe, et ce n'est pas non plus le meilleur. C'est un moteur parmi tant d'autres.</p>
+    </div>
+{% endblock %}

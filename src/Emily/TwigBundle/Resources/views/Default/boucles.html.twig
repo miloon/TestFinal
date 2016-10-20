@@ -1,0 +1,71 @@
+{% extends "EmilyRacineBundle::layout.html.twig" %}
+{% block title %}Boucles Twig{% endblock %}
+{% block content %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+          <h1>Boucles Twig</h1>
+          {% block lemenu %}{% include 'EmilyTwigBundle:Default:menu.html.twig' %}{% endblock%}
+        </div>
+
+        <h2>{% verbatim %}{% for i in 10..0 %}{% endverbatim %}</h2>
+        {% verbatim %}
+            Pour i <br>
+            {% for i in 10..0 %}<br>
+            {% if loop.first %}<br>   
+                Nombre de tours : {{loop.length}} => avec ça on aura une ligne qui affichera le nombre de tours. Ici, vu qu'on va de 10 jusque 0, ça fera 11 tours.<br>
+            {% endif %}<br>
+            {% if loop.index is odd %} => si le tour correspondant renvoie à une valeur paire, la valeur sera afficher en italique.<br>
+                <em>{{i}}</em><br>
+            {% else %} => sinon, du coup, forcément, ça sera impaire et là, le résultat s'affichera en gras.<br>
+                <strong>{{i}}</strong><br>
+            {% endif %}<br>
+                {% if not loop.last %} => si ce n'est pas le dernier tour, on ajoute une condition pour l'affichage :<br>
+                    - <br>
+            {% endif %}<br>
+        {% endfor %}
+        {% endverbatim %}   
+        
+        
+        <h4>Et le résultat de ce code affichera :</h4>
+        {% for i in 10..0 %}
+        {% if loop.first %}
+                <hr/>
+                <h5>Nombre de tours : {{loop.length}}</h5>
+                
+            {% endif %}
+            {# si impair #}
+            {% if loop.index is odd %}
+                <em>{{i}}</em>
+            {% else %}
+                <strong>{{i}}</strong>
+            {% endif %}
+                {# si pas le dernier tour #}
+                {% if not loop.last %}
+                    -
+            {% endif %}
+    {% endfor %}
+        
+    <h2>{% verbatim %}{% for user in ["Pierre","Mike","Coucou"] %}{% endverbatim %}</h2>
+    <p>On crée une boucle qui va afficher le contenu du tableau :</p>
+    {% verbatim %}
+    {% for user in ["Pierre","Mike","Coucou"] %}<br/>
+   {{ user }}<br/>
+    {% endfor %}<br/>
+    {% endverbatim %}
+    <h4>Et le résultat de ce code affichera :</h4>
+    {% for user in ["Pierre","Mike","Coucou"] %}
+        <li>{{ user }}</li>
+    {% endfor %}
+    
+    <h2>{% verbatim %}{% for letter in 'a'|upper..'z'|upper %}{% endverbatim %}</h2>
+    {% verbatim %}
+    {% for letter in 'a'|upper..'z'|upper %}<br/>
+    - {{ letter }}<br/>
+    {% endfor %}
+    {% endverbatim %}
+    <h4>Et le résultat de ce code affichera :</h4>
+    {% for letter in 'a'|upper..'z'|upper %}
+    - {{ letter }}
+    {% endfor %}
+    </div>
+{% endblock %}

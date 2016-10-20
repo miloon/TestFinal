@@ -9,9 +9,10 @@
           <a class="navbar-brand" href="{{ path("emily_racine_homepage") }}">Final Test</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+            <!-- J'ai choisi de supprimer la class active pour ne pas m'embêter à c/c le menu partout pour une seule classe. -->
           <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ path("emily_racine_homepage") }}">Home</a></li>
-            <li><a href="#">Vers Twig</a></li>
+            <li><a href="{{ path("emily_racine_homepage") }}">Home</a></li>
+            <li><a href="{{ path("emily_twig_homepage") }}">Vers Twig</a></li>
             <li><a href="#">Vers Crud</a></li>
             
           </ul>
@@ -20,7 +21,7 @@
     </nav>
     {% endblock %}
     
-    {% block corps %}
+    {% block content %}
         <div class="container theme-showcase" role="main">
             <div class="jumbotron">
               <h1>Theme example</h1>

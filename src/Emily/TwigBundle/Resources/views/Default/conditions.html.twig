@@ -1,0 +1,55 @@
+{% extends "EmilyRacineBundle::layout.html.twig" %}
+{% block title %}Conditions Twig{% endblock %}
+{% block content %}
+    <div class="container theme-showcase" role="main">
+        <div class="jumbotron">
+          <h1>Conditions Twig</h1>
+          {% block lemenu %}{% include 'EmilyTwigBundle:Default:menu.html.twig' %}{% endblock%}
+        </div>
+          <h2>{% verbatim %}{% set nombre = 5 %}{% endverbatim %}</h2>
+          
+          <p>Avec {% verbatim %}{% set nombre = 5 %}{% endverbatim %}, on va définir que la variable nombre est égale à 5.</p>
+        {% set nombre = 5 %}
+        
+        
+        <h2>{% verbatim %}{% if nombre < 10 %}blabla{% endif %}{% endverbatim %}</h2>
+            <p>Là, on va établir la condition "si la variable nombre est inférieure à 10" grâce au code Twig : <br/>
+        {% verbatim %}
+            {% if nombre < 10 %}<br/>
+            Le nombre {{nombre}} est plus petit que 10.<br/>
+            {% endif %}
+        {% endverbatim %}</p>
+            <p>Si la condition est vraie, ça nous affichera :
+                {% if nombre < 10 %}
+                    <strong>Le nombre {{nombre}} est plus petit que 10.</strong>
+            {% endif %}</p>
+
+        <h2>{% verbatim %}{% if nombre <= 5 %}blabla{% endif %}{% endverbatim %}</h2>
+
+            <p>Là, on va établir la condition "si la variable nombre plus petit ou égal à 5" grâce au code Twig : <br/>
+            {% verbatim %}
+                {% if nombre <= 5 %}<br/>
+                Le nombre {{nombre}} est plus petit ou égal à 5.<br/>
+                {% endif %}
+            {% endverbatim %}</p>
+                <p>Si la condition est vraie, ça nous affichera :
+                    {% if nombre < 10 %}
+                        <strong>Le nombre {{nombre}} est plus petit ou égal à 5.</strong>
+                    {% endif %}</p>
+
+
+        <h2>{% verbatim %}{% if nombre not in [1,2,3] %}blabla{% endif %}{% endverbatim %}</h2>
+
+    <p>Là, on va établir la condition "si le nombre défini dans la variable nombre est dans le tableau contenant les chiffres 1, 2 et 3" grâce au code Twig : <br/>
+    {% verbatim %}
+        {% if nombre not in [1,2,3] %}<br/>
+        Le nombre {{nombre}} n'est ni 1, 2 ou 3.<br/>
+        {% endif %}
+    {% endverbatim %}</p>
+        <p>Si la condition est vraie, ça nous affichera :
+            {% if nombre not in [1,2,3] %}
+                <strong>Le nombre {{nombre}} n'est ni 1, 2 ou 3.</strong>
+            {% endif %}</p>
+
+    </div>
+{% endblock %}
