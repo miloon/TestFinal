@@ -4,5 +4,5 @@
 !app/cache/.gitkeep
 !app/logs/.gitkeep
 /app/phpunit.xml
-/vendor/
+
 
