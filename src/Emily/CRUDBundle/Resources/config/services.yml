@@ -1,0 +1,4 @@
+services:
+#    emily_crud.example:
+#        class: Emily\CRUDBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Emily\RacineBundle\EmilyRacineBundle(),
             new Emily\TwigBundle\EmilyTwigBundle(),
+            new Emily\CRUDBundle\EmilyCRUDBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

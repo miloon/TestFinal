@@ -1,3 +1,7 @@
+emily_crud:
+    resource: "@EmilyCRUDBundle/Resources/config/routing.yml"
+    prefix:   /CRUD
+
 emily_twig:
     resource: "@EmilyTwigBundle/Resources/config/routing.yml"
     prefix:   /EmilyTwig
